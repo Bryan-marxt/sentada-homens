@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Higgsfild__jobs_wait",
+      "mcp__Higgsfild__models_explore",
+      "mcp__Higgsfild__balance",
+      "mcp__Higgsfild__get_preferences",
+      "mcp__Higgsfild__show_generation_by_ids",
+      "mcp__Higgsfild__generate_image",
+      "mcp__Higgsfild__generate_image_batch",
+      "mcp__Inlead__list_components",
+      "mcp__Inlead__get_component_contracts",
+      "mcp__Inlead__get_funnel_steps",
+      "mcp__Inlead__validate_funnel_draft",
+      "mcp__Inlead__edit_funnel",
+      "mcp__Inlead__list_funnels",
+      "mcp__ATOMICAT__atomicat_capture_quiz_path",
+      "mcp__ATOMICAT__atomicat_capture_quiz_step",
+      "mcp__ATOMICAT__atomicat_capture_webpage",
+      "mcp__Supabase__execute_sql",
+      "mcp__Supabase__get_edge_function",
+      "mcp__Supabase__list_edge_functions"
+    ]
+  }
+}
