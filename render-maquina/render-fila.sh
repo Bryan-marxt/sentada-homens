@@ -25,7 +25,10 @@ job=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("job","
 etapa=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("etapa","render"))' "$dir/pedido.json")
 echo "$(date -Is) pegou $etapa $oferta" >> "$JOBS/render-fila.log"
 
-prompt="$(cat "$HOME/render-maquina/prompt.md")
+# as instruções vêm junto com o trabalho (Supabase); o prompt.md local é só reserva
+instr=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("instrucoes",""))' "$dir/pedido.json")
+[ -n "$instr" ] || instr="$(cat "$HOME/render-maquina/prompt.md")"
+prompt="$instr
 
 PEDIDO: $dir/pedido.json
 RESULTADO (escreva aqui): $dir/resultado.json"
