@@ -1,1 +1,406 @@
-{"steps": [{"id": "stp_idade", "title": "Secar a barriga da menopausa sem forçar joelho e coluna. Qual sua idade?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>Secar a barriga da menopausa sem forçar joelho e coluna. Qual sua idade?</h2>", "name": "idade", "required": true, "type": "options", "options": [{"id": "", "label": "De 45 a 50 anos", "destination": "next"}, {"id": "", "label": "De 51 a 60 anos", "destination": "next"}, {"id": "", "label": "De 61 a 70 anos", "destination": "next"}, {"id": "", "label": "Mais de 70 anos", "destination": "next"}]}}]}, {"id": "stp_barriga", "title": "Como está a sua barriga hoje?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>Como está a sua barriga hoje?</h2>", "name": "barriga", "required": true, "type": "options", "options": [{"id": "", "label": "Estômago alto, parece botija encapada", "destination": "next"}, {"id": "", "label": "Pochete caída embaixo do umbigo", "destination": "next"}, {"id": "", "label": "Dura e estufada, parece grávida", "destination": "next"}, {"id": "", "label": "Mole e flácida, cai por cima da calça", "destination": "next"}]}}]}, {"id": "stp_diagnostico", "title": "Tem algum diagnóstico? Pode marcar mais de um.", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>Tem algum diagnóstico? Pode marcar mais de um.</h2>", "name": "diagnostico", "required": true, "type": "options", "options": [{"id": "", "label": "Artrose", "destination": "next"}, {"id": "", "label": "Hérnia de disco ou bico de papagaio", "destination": "next"}, {"id": "", "label": "Dor no ciático", "destination": "next"}, {"id": "", "label": "Nenhum, só dores pelo corpo", "destination": "next"}], "multiple": true, "awaitSubmit": true}}, {"type": "button", "content": {"id": "", "type": "next", "label": "Continuar", "destination": "next", "target": false}}]}, {"id": "stp_dificuldades", "title": "O que ficou difícil de fazer sem dor?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>O que ficou difícil de fazer sem dor?</h2>", "name": "dificuldades", "required": true, "type": "options", "options": [{"id": "", "label": "Levantar da cadeira sem as mãos", "destination": "next"}, {"id": "", "label": "Descer escada de frente", "destination": "next"}, {"id": "", "label": "Abaixar pra pegar algo no chão", "destination": "next"}, {"id": "", "label": "Ficar muito tempo em pé", "destination": "next"}], "multiple": true, "awaitSubmit": true}}, {"type": "button", "content": {"id": "", "type": "next", "label": "Continuar", "destination": "next", "target": false}}]}, {"id": "stp_meta", "title": "Quantos centímetros de cintura você quer perder primeiro?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>Quantos centímetros de cintura você quer perder primeiro?</h2>", "name": "meta_cintura", "required": true, "type": "options", "options": [{"id": "", "label": "Até 3 cm", "destination": "next"}, {"id": "", "label": "De 3 a 5 cm", "destination": "next"}, {"id": "", "label": "Mais de 5 cm", "destination": "next"}]}}]}, {"id": "stp_meta_possivel", "title": "Boa notícia (meta possível)", "layers": [{"type": "text", "content": {"id": "", "text": "<h2 class='ql-align-center'>Boa notícia: com o exercício certo, essa meta cabe em 7 dias.</h2>"}}, {"type": "button", "content": {"id": "", "type": "next", "label": "Continuar", "destination": "next", "target": false}}]}, {"id": "stp_tentativas", "title": "O que acontece quando você tenta caminhada ou academia?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>O que acontece quando você tenta caminhada ou academia?</h2>", "name": "tentativas", "required": true, "type": "options", "options": [{"id": "", "label": "Travo a coluna em poucos dias", "destination": "next"}, {"id": "", "label": "O joelho dói e eu paro", "destination": "next"}, {"id": "", "label": "Me canso e não vejo resultado", "destination": "next"}, {"id": "", "label": "Tenho medo de me machucar", "destination": "next"}]}}]}, {"id": "stp_compromisso", "title": "Topa 15 minutos por dia, deitada no tapete da sala, por 7 dias?", "layers": [{"type": "options", "content": {"id": "", "introType": "text", "introduction": "<h2 class='ql-align-center'>Topa 15 minutos por dia, deitada no tapete da sala, por 7 dias?</h2>", "name": "compromisso", "required": true, "type": "options", "options": [{"id": "", "label": "Sim, 15 minutos eu consigo", "destination": "next"}, {"id": "", "label": "Sim, se for sem pulo e sem dor", "destination": "next"}, {"id": "", "label": "Quero, mas tenho medo de não conseguir", "destination": "next"}]}}]}, {"id": "stp_analisando", "title": "Carregamento: analisando respostas", "layers": [{"type": "loading", "content": {"id": "", "seconds": 6, "style": "", "title": "Analisando suas respostas… cruzando idade, barriga e articulações.", "show_title": true, "show_percent": true, "type": "next", "destination": "next"}}]}, {"id": "stp_resultado", "title": "Resultado: Elástico Frouxo Abdominal", "layers": [{"type": "text", "content": {"id": "", "text": "<h2 class='ql-align-center'>Resultado: Elástico Frouxo Abdominal. A musculatura de dentro da barriga afrouxou.</h2><p class='ql-align-center'>Pelas suas respostas, a musculatura de dentro da sua barriga afrouxou com a queda hormonal da menopausa, como o elástico de uma calça velha que perdeu a pressão. Por isso a barriga vai para a frente mesmo comendo pouco, e o peso do corpo cai em cima do joelho, do quadril e da lombar.</p><p class='ql-align-center'>A boa notícia: isso responde a movimento feito na ordem certa, deitada e sem impacto.</p>"}}, {"type": "button", "content": {"id": "", "type": "next", "label": "Entender o que fazer", "destination": "next", "target": false}}]}, {"id": "stp_prova", "title": "Prova: depoimentos (placeholder)", "layers": [{"type": "text", "content": {"id": "", "text": "<h2 class='ql-align-center'>Mulheres de 50+ que começaram deitadas no tapete.</h2><p class='ql-align-center'>[DEPOIMENTO REAL AQUI]</p>"}}, {"type": "button", "content": {"id": "", "type": "next", "label": "Continuar", "destination": "next", "target": false}}]}, {"id": "stp_video", "title": "Chamada para a mini VSL", "layers": [{"type": "text", "content": {"id": "", "text": "<h2 class='ql-align-center'>Seu plano está pronto. Assista ao vídeo rápido para liberar sua vaga.</h2>"}}, {"type": "button", "content": {"id": "", "type": "redirect", "label": "ASSISTIR AGORA", "destination": "https://pagina-juncao-sda-sds.gestorigormaia.workers.dev/desafio50-mini-vsl?product=2353177f-ac3d-4318-a1c9-ab0d6820b64f", "target": false}}]}]}
+{
+ "steps": [
+  {
+   "id": "stp_idade",
+   "title": "Secar a barriga da menopausa sem forçar joelho e coluna. Qual sua idade?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>Secar a barriga da menopausa sem forçar joelho e coluna. Qual sua idade?</h2>",
+      "name": "idade",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "De 45 a 50 anos",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "De 51 a 60 anos",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "De 61 a 70 anos",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Mais de 70 anos",
+        "destination": "next"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_barriga",
+   "title": "Como está a sua barriga hoje?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>Como está a sua barriga hoje?</h2>",
+      "name": "barriga",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Estômago alto, parece botija encapada",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Pochete caída embaixo do umbigo",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Dura e estufada, parece grávida",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Mole e flácida, cai por cima da calça",
+        "destination": "next"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_diagnostico",
+   "title": "Tem algum diagnóstico? Pode marcar mais de um.",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>Tem algum diagnóstico? Pode marcar mais de um.</h2>",
+      "name": "diagnostico",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Artrose",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Hérnia de disco ou bico de papagaio",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Dor no ciático",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Nenhum, só dores pelo corpo",
+        "destination": "next"
+       }
+      ],
+      "multiple": true,
+      "awaitSubmit": true
+     }
+    },
+    {
+     "type": "button",
+     "content": {
+      "id": "",
+      "type": "next",
+      "label": "Continuar",
+      "destination": "next",
+      "target": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_dificuldades",
+   "title": "O que ficou difícil de fazer sem dor?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>O que ficou difícil de fazer sem dor?</h2>",
+      "name": "dificuldades",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Levantar da cadeira sem as mãos",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Descer escada de frente",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Abaixar pra pegar algo no chão",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Ficar muito tempo em pé",
+        "destination": "next"
+       }
+      ],
+      "multiple": true,
+      "awaitSubmit": true
+     }
+    },
+    {
+     "type": "button",
+     "content": {
+      "id": "",
+      "type": "next",
+      "label": "Continuar",
+      "destination": "next",
+      "target": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_meta",
+   "title": "Quantos centímetros de cintura você quer perder primeiro?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>Quantos centímetros de cintura você quer perder primeiro?</h2>",
+      "name": "meta_cintura",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Até 3 cm",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "De 3 a 5 cm",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Mais de 5 cm",
+        "destination": "next"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_meta_possivel",
+   "title": "Boa notícia (meta possível)",
+   "layers": [
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<h2 class='ql-align-center'>Boa notícia: com o exercício certo, essa meta cabe em 7 dias.</h2>"
+     }
+    },
+    {
+     "type": "button",
+     "content": {
+      "id": "",
+      "type": "next",
+      "label": "Continuar",
+      "destination": "next",
+      "target": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_tentativas",
+   "title": "O que acontece quando você tenta caminhada ou academia?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>O que acontece quando você tenta caminhada ou academia?</h2>",
+      "name": "tentativas",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Travo a coluna em poucos dias",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "O joelho dói e eu paro",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Me canso e não vejo resultado",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Tenho medo de me machucar",
+        "destination": "next"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_compromisso",
+   "title": "Topa 15 minutos por dia, deitada no tapete da sala, por 7 dias?",
+   "layers": [
+    {
+     "type": "options",
+     "content": {
+      "id": "",
+      "introType": "text",
+      "introduction": "<h2 class='ql-align-center'>Topa 15 minutos por dia, deitada no tapete da sala, por 7 dias?</h2>",
+      "name": "compromisso",
+      "required": true,
+      "type": "options",
+      "options": [
+       {
+        "id": "",
+        "label": "Sim, 15 minutos eu consigo",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Sim, se for sem pulo e sem dor",
+        "destination": "next"
+       },
+       {
+        "id": "",
+        "label": "Quero, mas tenho medo de não conseguir",
+        "destination": "next"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_analisando",
+   "title": "Carregamento: analisando respostas",
+   "layers": [
+    {
+     "type": "loading",
+     "content": {
+      "id": "",
+      "seconds": 6,
+      "style": "",
+      "title": "Analisando suas respostas… cruzando idade, barriga e articulações.",
+      "show_title": true,
+      "show_percent": true,
+      "type": "next",
+      "destination": "next"
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_resultado",
+   "title": "Resultado: Elástico Frouxo Abdominal",
+   "layers": [
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<h2 class='ql-align-center'>Resultado: Elástico Frouxo Abdominal. A musculatura de dentro da barriga afrouxou.</h2><p class='ql-align-center'>Pelas suas respostas, a musculatura de dentro da sua barriga afrouxou com a queda hormonal da menopausa, como o elástico de uma calça velha que perdeu a pressão. Por isso a barriga vai para a frente mesmo comendo pouco, e o peso do corpo cai em cima do joelho, do quadril e da lombar.</p><p class='ql-align-center'>A boa notícia: isso responde a movimento feito na ordem certa, deitada e sem impacto.</p>"
+     }
+    },
+    {
+     "type": "button",
+     "content": {
+      "id": "",
+      "type": "next",
+      "label": "Entender o que fazer",
+      "destination": "next",
+      "target": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_prova",
+   "title": "Prova: depoimentos (placeholder)",
+   "layers": [
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<h2 class='ql-align-center'>Mulheres de 50+ que começaram deitadas no tapete.</h2><p class='ql-align-center'>[DEPOIMENTO REAL AQUI]</p>"
+     }
+    },
+    {
+     "type": "button",
+     "content": {
+      "id": "",
+      "type": "next",
+      "label": "Continuar",
+      "destination": "next",
+      "target": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "stp_mini_vsl",
+   "title": "Mini VSL dentro do quiz (última tela)",
+   "layers": [
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<h2 class='ql-align-center'>Seu plano de 7 dias está pronto. Assista ao vídeo até o fim: nele eu explico o seu resultado e como liberar a sua vaga.</h2>"
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<p class='ql-align-center'>[VÍDEO DA MINI VSL AQUI · embed do VTurb com o roteiro aprovado na copy]</p>"
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "id": "",
+      "text": "<p class='ql-align-center'>[BOTÃO DO CHECKOUT R$ 29,90 AQUI · falta o link da Hotmart; aparece no fim do vídeo]</p>"
+     }
+    }
+   ]
+  }
+ ]
+}
