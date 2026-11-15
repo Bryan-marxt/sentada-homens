@@ -22,14 +22,15 @@ mkdir -p "$dir"
 echo "$resp" > "$dir/pedido.json"
 oferta=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["oferta_id"])' "$dir/pedido.json")
 job=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("job",""))' "$dir/pedido.json")
-echo "$(date -Is) pegou $oferta" >> "$JOBS/render-fila.log"
+etapa=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("etapa","render"))' "$dir/pedido.json")
+echo "$(date -Is) pegou $etapa $oferta" >> "$JOBS/render-fila.log"
 
 prompt="$(cat "$HOME/render-maquina/prompt.md")
 
 PEDIDO: $dir/pedido.json
 RESULTADO (escreva aqui): $dir/resultado.json"
 
-cd "$SKILL_DIR" || { chamar "{\"acao\":\"erro\",\"oferta_id\":\"$oferta\",\"job\":\"$job\",\"erro\":\"pasta da skill não encontrada\"}" >/dev/null; exit 1; }
+cd "$SKILL_DIR" || { chamar "{\"acao\":\"erro\",\"oferta_id\":\"$oferta\",\"job\":\"$job\",\"etapa\":\"$etapa\",\"erro\":\"pasta da skill não encontrada\"}" >/dev/null; exit 1; }
 timeout 3h claude -p "$prompt" \
   --allowedTools "Bash Read Write Edit Glob Grep WebFetch" \
   --permission-mode acceptEdits \
@@ -37,11 +38,11 @@ timeout 3h claude -p "$prompt" \
 codigo=$?
 
 if [ -s "$dir/resultado.json" ] && python3 -c 'import json,sys;json.load(open(sys.argv[1]))' "$dir/resultado.json" 2>/dev/null; then
-  corpo=$(python3 -c 'import json,sys;print(json.dumps({"acao":"devolver","oferta_id":sys.argv[2],"job":sys.argv[3],"resultado":json.load(open(sys.argv[1]))}))' "$dir/resultado.json" "$oferta" "$job")
+  corpo=$(python3 -c 'import json,sys;print(json.dumps({"acao":"devolver","oferta_id":sys.argv[2],"job":sys.argv[3],"etapa":sys.argv[4],"resultado":json.load(open(sys.argv[1]))}))' "$dir/resultado.json" "$oferta" "$job" "$etapa")
   chamar "$corpo" >> "$JOBS/render-fila.log" 2>&1
   echo "$(date -Is) devolveu $oferta" >> "$JOBS/render-fila.log"
 else
-  corpo=$(tail -c 1500 "$dir/claude.log" | python3 -c 'import json,sys;print(json.dumps({"acao":"erro","oferta_id":sys.argv[1],"job":sys.argv[3],"erro":"saida "+sys.argv[2]+": "+sys.stdin.read()}))' "$oferta" "$codigo" "$job")
+  corpo=$(tail -c 1500 "$dir/claude.log" | python3 -c 'import json,sys;print(json.dumps({"acao":"erro","oferta_id":sys.argv[1],"job":sys.argv[3],"etapa":sys.argv[4],"erro":"saida "+sys.argv[2]+": "+sys.stdin.read()}))' "$oferta" "$codigo" "$job" "$etapa")
   chamar "$corpo" >> "$JOBS/render-fila.log" 2>&1
   echo "$(date -Is) erro $oferta (código $codigo)" >> "$JOBS/render-fila.log"
 fi

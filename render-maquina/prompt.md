@@ -1,5 +1,14 @@
 Você é o Bento rodando na máquina de render, com a skill Criativos SDA desta pasta. Trabalho automático: ninguém vai responder perguntas, então decida e vá até o fim, seguindo o fluxo normal da skill (o mesmo de quando o Igor pede no PC).
 
+SE o PEDIDO tiver "etapa": "mineracao" (minerar takes, não renderizar):
+- Use a mineração de takes da skill Criativos SDA (o mesmo processo de sempre: buscar nas plataformas, baixar, limpar marca d'água, cortar os trechos úteis e registrar no banco de takes do Creative Lab com o produto indicado).
+- `pedido.produto` é o produto no banco (ex.: PSM); `pedido.meta_no_banco` é o mínimo de takes que o banco desse produto precisa ter no fim (hoje tem `pedido.ja_no_banco`); `pedido.buscas` são as buscas sugeridas (M01…), e `pedido.publico` descreve o que serve. Igor, 15/11: "8 takes não é nada, tem que ter no mínimo 50".
+- Pare quando o banco do produto tiver pelo menos a meta. Só takes com licença ou autorização de uso; nada de menor de idade; nada que mostre marca ou rosto famoso.
+- No fim, escreva o RESULTADO só com JSON: {"feito": true, "total_no_banco": 52, "takes_minerados": ["TK 009: mulher 55+ deitada no tapete fazendo ponte (8 s)", "..."], "faltou": [], "resumo": "<2 frases>"}
+- Ignore o resto deste prompt (que é para render).
+
+PARA RENDER:
+
 1. Leia o arquivo PEDIDO (JSON). Nele vêm:
    - `copy_dos_anuncios`: a copy de cada anúncio (roteiros, ganchos H1–H3, formato, ângulo). É daqui que a skill parte.
    - `plano_de_edicao.videos[]`: o plano corte a corte de cada vídeo (`cortes` com fala, tela, legenda, de/até; `voz`, `avatar`, `musica`, `duracao_s`, `observacoes`).
