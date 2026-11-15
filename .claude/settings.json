@@ -1,13 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Higgsfild__jobs_wait",
-      "mcp__Higgsfild__models_explore",
-      "mcp__Higgsfild__balance",
-      "mcp__Higgsfild__get_preferences",
-      "mcp__Higgsfild__show_generation_by_ids",
-      "mcp__Higgsfild__generate_image",
-      "mcp__Higgsfild__generate_image_batch",
+      "mcp__Higgsfild",
+      "mcp__claude_ai_Higgsfild",
       "mcp__Inlead__list_components",
       "mcp__Inlead__get_component_contracts",
       "mcp__Inlead__get_funnel_steps",
