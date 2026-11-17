@@ -38,3 +38,12 @@ que ser coisa real… a copy também não ficou boa… a gente tá usando a inte
 - Nome do produto: comparar com os nomes das ofertas que escalam no nicho e trazer 3 a 5 opções para o Igor escolher.
 - As mesmas regras estão gravadas para os agentes (`ofertas_time_eventos` tipo `pedido_do_dono` nos cargos criativos,
   copy, estrategia, edicao, takes) e na máquina de render (`app_config.render_maquina_prompt`, "REGRA DO DONO 17/11").
+
+## Mineração e dissecação: sobrevivência = só infoproduto (Igor, 17/11)
+"Tem muita oferta de sobrevivência que foi minerada que não é infoproduto."
+
+- Ao minerar/classificar (`lab_spy_achados`): produto físico (kit, lanterna, bateria, comida pronta) vai como
+  "Produto físico"; arbitragem/advertorial como "Advertorial"; marca fora do tema (streaming, banco, ONG, imobiliária)
+  fica sem nicho.
+- Para modelar copy e criativos, a base de dissecação usa só infoproduto do nicho (ebook, app, curso, guia, método).
+- Regra gravada para os agentes em `ofertas_time_eventos` (`pedido_do_dono`, chaves `nicho` e `analise`).
